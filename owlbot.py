@@ -32,6 +32,7 @@ for library in s.get_staging_dirs(default_version):
                 \*\*JSON Example\*\*
                 ::""",
         """resource. JSON Example.
+
                 .. code-block:: python\n""",
     )
 
@@ -40,6 +41,7 @@ for library in s.get_staging_dirs(default_version):
         """\*\*YAML Example\*\*
                 ::""",
         """\n                **YAML Example**
+
                 ::\n""",
     )
 

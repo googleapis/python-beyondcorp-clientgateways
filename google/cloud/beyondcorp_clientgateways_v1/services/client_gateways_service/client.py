@@ -1162,6 +1162,7 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
                 expression that further constrains the role binding
                 based on attributes about the request and/or target
                 resource. JSON Example.
+
                 .. code-block:: python
 
                     {
@@ -1189,6 +1190,7 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
                     }
 
                 **YAML Example**
+
                 ::
 
                     bindings:
@@ -1279,6 +1281,7 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
                 expression that further constrains the role binding
                 based on attributes about the request and/or target
                 resource. JSON Example.
+
                 .. code-block:: python
 
                     {
@@ -1306,6 +1309,7 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
                     }
 
                 **YAML Example**
+
                 ::
 
                     bindings:

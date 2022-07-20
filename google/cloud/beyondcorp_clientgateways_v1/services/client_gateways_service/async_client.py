@@ -929,6 +929,7 @@ class ClientGatewaysServiceAsyncClient:
                 expression that further constrains the role binding
                 based on attributes about the request and/or target
                 resource. JSON Example.
+
                 .. code-block:: python
 
                     {
@@ -956,6 +957,7 @@ class ClientGatewaysServiceAsyncClient:
                     }
 
                 **YAML Example**
+
                 ::
 
                     bindings:
@@ -1046,6 +1048,7 @@ class ClientGatewaysServiceAsyncClient:
                 expression that further constrains the role binding
                 based on attributes about the request and/or target
                 resource. JSON Example.
+
                 .. code-block:: python
 
                     {
@@ -1073,6 +1076,7 @@ class ClientGatewaysServiceAsyncClient:
                     }
 
                 **YAML Example**
+
                 ::
 
                     bindings:
