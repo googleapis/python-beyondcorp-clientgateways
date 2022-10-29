@@ -13,6 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+from google.cloud.beyondcorp_clientgateways import gapic_version as package_version
+
+__version__ = package_version.__version__
+
 
 from .services.client_gateways_service import ClientGatewaysServiceClient
 from .services.client_gateways_service import ClientGatewaysServiceAsyncClient
