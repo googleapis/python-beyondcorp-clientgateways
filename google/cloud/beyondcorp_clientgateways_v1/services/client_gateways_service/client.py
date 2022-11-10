@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -67,7 +78,7 @@ class ClientGatewaysServiceClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[ClientGatewaysServiceTransport]:
         """Returns an appropriate transport class.
 
@@ -349,7 +360,7 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, ClientGatewaysServiceTransport, None] = None,
+        transport: Optional[Union[str, ClientGatewaysServiceTransport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -447,11 +458,13 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def list_client_gateways(
         self,
-        request: Union[client_gateways_service.ListClientGatewaysRequest, dict] = None,
+        request: Optional[
+            Union[client_gateways_service.ListClientGatewaysRequest, dict]
+        ] = None,
         *,
-        parent: str = None,
+        parent: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> pagers.ListClientGatewaysPager:
         r"""Lists ClientGateways in a given project and location.
@@ -562,11 +575,13 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def get_client_gateway(
         self,
-        request: Union[client_gateways_service.GetClientGatewayRequest, dict] = None,
+        request: Optional[
+            Union[client_gateways_service.GetClientGatewayRequest, dict]
+        ] = None,
         *,
-        name: str = None,
+        name: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> client_gateways_service.ClientGateway:
         r"""Gets details of a single ClientGateway.
@@ -661,13 +676,15 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def create_client_gateway(
         self,
-        request: Union[client_gateways_service.CreateClientGatewayRequest, dict] = None,
+        request: Optional[
+            Union[client_gateways_service.CreateClientGatewayRequest, dict]
+        ] = None,
         *,
-        parent: str = None,
-        client_gateway: client_gateways_service.ClientGateway = None,
-        client_gateway_id: str = None,
+        parent: Optional[str] = None,
+        client_gateway: Optional[client_gateways_service.ClientGateway] = None,
+        client_gateway_id: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Creates a new ClientGateway in a given project and
@@ -803,11 +820,13 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def delete_client_gateway(
         self,
-        request: Union[client_gateways_service.DeleteClientGatewayRequest, dict] = None,
+        request: Optional[
+            Union[client_gateways_service.DeleteClientGatewayRequest, dict]
+        ] = None,
         *,
-        name: str = None,
+        name: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Deletes a single ClientGateway.
@@ -937,10 +956,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def list_operations(
         self,
-        request: operations_pb2.ListOperationsRequest = None,
+        request: Optional[operations_pb2.ListOperationsRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operations_pb2.ListOperationsResponse:
         r"""Lists operations that match the specified filter in the request.
@@ -991,10 +1010,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def get_operation(
         self,
-        request: operations_pb2.GetOperationRequest = None,
+        request: Optional[operations_pb2.GetOperationRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operations_pb2.Operation:
         r"""Gets the latest state of a long-running operation.
@@ -1045,10 +1064,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def delete_operation(
         self,
-        request: operations_pb2.DeleteOperationRequest = None,
+        request: Optional[operations_pb2.DeleteOperationRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> None:
         r"""Deletes a long-running operation.
@@ -1100,10 +1119,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def cancel_operation(
         self,
-        request: operations_pb2.CancelOperationRequest = None,
+        request: Optional[operations_pb2.CancelOperationRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> None:
         r"""Starts asynchronous cancellation on a long-running operation.
@@ -1154,10 +1173,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def set_iam_policy(
         self,
-        request: iam_policy_pb2.SetIamPolicyRequest = None,
+        request: Optional[iam_policy_pb2.SetIamPolicyRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> policy_pb2.Policy:
         r"""Sets the IAM access control policy on the specified function.
@@ -1274,10 +1293,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def get_iam_policy(
         self,
-        request: iam_policy_pb2.GetIamPolicyRequest = None,
+        request: Optional[iam_policy_pb2.GetIamPolicyRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> policy_pb2.Policy:
         r"""Gets the IAM access control policy for a function.
@@ -1395,10 +1414,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def test_iam_permissions(
         self,
-        request: iam_policy_pb2.TestIamPermissionsRequest = None,
+        request: Optional[iam_policy_pb2.TestIamPermissionsRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> iam_policy_pb2.TestIamPermissionsResponse:
         r"""Tests the specified IAM permissions against the IAM access control
@@ -1454,10 +1473,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def get_location(
         self,
-        request: locations_pb2.GetLocationRequest = None,
+        request: Optional[locations_pb2.GetLocationRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> locations_pb2.Location:
         r"""Gets information about a location.
@@ -1508,10 +1527,10 @@ class ClientGatewaysServiceClient(metaclass=ClientGatewaysServiceClientMeta):
 
     def list_locations(
         self,
-        request: locations_pb2.ListLocationsRequest = None,
+        request: Optional[locations_pb2.ListLocationsRequest] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> locations_pb2.ListLocationsResponse:
         r"""Lists information about the supported locations for this service.
